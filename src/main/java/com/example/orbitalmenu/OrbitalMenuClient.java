@@ -27,8 +27,8 @@ public class OrbitalMenuClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             while (OPEN_MENU.consumeClick()) {
-                if (client.player != null && client.screen == null) {
-                    client.setScreen(new StrikeScreen());
+                if (client.player != null && client.gui.screen() == null) {
+                    client.gui.setScreen(new StrikeScreen());
                 }
             }
             if (client.player != null && !QUEUE.isEmpty()) {
