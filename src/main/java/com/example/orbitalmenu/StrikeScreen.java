@@ -17,7 +17,7 @@ public class StrikeScreen extends Screen {
         int y = this.height / 2 - 90;
 
         this.addRenderableWidget(new StringWidget(x, y - 16, w, 12,
-                Component.literal("Orbital Menu - aim at a block"), this.font).alignCenter());
+                Component.literal("Orbital Menu - aim at a block"), this.font));
 
         y = add("Lightning", Strikes::lightning, x, y, w, h, gap);
         y = add("Single Strike", Strikes::single, x, y, w, h, gap);
